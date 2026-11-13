@@ -1,0 +1,6 @@
+{
+  "name": "Smart Market",
+  "description": "AI-powered inventory management, sales tracking, and statistical demand forecasting platform for Nigerian traders in Onitsha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

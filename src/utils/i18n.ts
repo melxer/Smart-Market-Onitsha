@@ -1,0 +1,58 @@
+export type LangCode = 'en' | 'ig';
+
+const DICT = {
+  en: {
+    appTitle: 'Smart Market',
+    navDashboard: 'Dashboard',
+    navInventory: 'Inventory',
+    navSales: 'Sales & POS',
+    navForecasting: 'Forecasting',
+    navRestocking: 'Restocking',
+    navAnalytics: 'Analytics',
+    navSettings: 'Settings',
+    totalRevenue: 'Total Revenue',
+    grossProfit: 'Est. Gross Profit',
+    stockValue: 'Stock Valuation',
+    todaysSales: "Today's Sales",
+    totalProducts: 'Active Products',
+    lowStock: 'Low Stock',
+    outOfStock: 'Out of Stock',
+    recordSale: 'Record Sale',
+    addProduct: 'Add Product',
+    restockAlert: 'Urgent Restock Alerts',
+    offlineQueue: 'Offline Sync Queue',
+    syncNow: 'Sync Now',
+    logout: 'Sign Out',
+    demoTag: 'Demo Dataset · Synthetic Onitsha History',
+    languageLabel: 'Language',
+  },
+  ig: {
+    appTitle: 'Smart Market',
+    navDashboard: 'Isi Mbido',
+    navInventory: 'Ngwongwo Ahịa',
+    navSales: 'Ire Ahịa (POS)',
+    navForecasting: 'Amụma Ahịa',
+    navRestocking: 'Ịzụba Ngwongwo',
+    navAnalytics: 'Nchịkọta Ego',
+    navSettings: 'Ntọala',
+    totalRevenue: 'Ego Ahịa Niile',
+    grossProfit: 'Uru A Tụrụ Anya',
+    stockValue: 'Ego Ngwongwo Dị',
+    todaysSales: 'Ahịa Taa',
+    totalProducts: 'Ngwongwo Dị',
+    lowStock: 'Ngwongwo Na-agwụ',
+    outOfStock: 'Ọ Gwụla',
+    recordSale: 'Dee Ahịa',
+    addProduct: 'Tinye Ngwongwo',
+    restockAlert: 'Ngwongwo Kwesịrị Ịzụta Ngwa',
+    offlineQueue: 'Ahịa Offline Na-eche Sync',
+    syncNow: 'Zipụ Ugbu a',
+    logout: 'Pụọ',
+    demoTag: 'Ihe Nlereanya · Akụkọ Ahịa Onitsha',
+    languageLabel: 'Asụsụ',
+  },
+} as const;
+
+export function t(lang: LangCode, key: keyof (typeof DICT)['en']): string {
+  return DICT[lang][key] ?? DICT.en[key];
+}
